@@ -13,10 +13,10 @@ let editId = null;
 
 const API_URL = 'https://travel-planner-api-ao35.onrender.com';
 
-startDateInput.addEventListener('change', () => {
+startDateInput.addEventListener('input', () => {
     const selectedDate = startDateInput.value;
     endDateInput.min = selectedDate;
-    if (!endDateInput.value || endDateInput.value < selectedDate) {
+    if (endDateInput.value && endDateInput.value < selectedDate) {
         endDateInput.value = selectedDate;
     }
 });
@@ -69,6 +69,8 @@ const startEdit = (trip) => {
     document.getElementById('start_date').value = trip.start_date.split('T')[0];
     document.getElementById('end_date').value = trip.end_date.split('T')[0];
     document.getElementById('budget').value = trip.budget;
+
+    endDateInput.min = document.getElementById('start_date').value;
 
     submitBtn.innerText = "Update Trip";
     submitBtn.style.backgroundColor = "#ffc107";
@@ -161,6 +163,8 @@ tripForm.addEventListener('submit', async (e) => {
         submitBtn.innerText = "Add Trip";
         submitBtn.style.backgroundColor = "#007bff";
         submitBtn.style.color = "white";
+        
+        endDateInput.min = "";
         
         tripForm.reset();
         getTrips();
