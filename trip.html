@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details - Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav style="background: white; padding: 15px; display: flex; justify-content: center; gap: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;">
+        <a href="index.html" style="text-decoration: none; color: #666; font-weight: bold;">Dashboard</a>
+        <a href="about.html" style="text-decoration: none; color: #666; font-weight: bold;">About Project</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html" style="text-decoration: none; color: #007bff; font-size: 14px;">← Back to Dashboard</a>
+        
+        <div id="trip-details-container" style="margin-top: 20px;">
+            <h2 id="detail-destination">Loading...</h2>
+            <p id="detail-date" style="color: #666;"></p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <h3>Savings Goal (Tabung)</h3>
+            <div style="background: #e9ecef; border-radius: 10px; height: 25px; width: 100%; margin: 15px 0; overflow: hidden;">
+                <div id="progress-bar" style="background: #28a745; width: 0%; height: 100%; transition: width 0.5s ease-in-out;"></div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 20px;">
+                <span>Saved: RM<span id="saved-amount">0</span></span>
+                <span>Goal: RM<span id="goal-amount">0</span></span>
+            </div>
+
+            <form id="savings-form">
+                <label style="font-size: 14px; color: #333;">Add to Savings (RM):</label>
+                <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <input type="number" id="deposit-amount" placeholder="e.g. 100" required>
+                    <button type="submit" style="flex: 0 0 100px; background-color: #28a745;">Deposit</button>
+                </div>
+            </form>
+
+            <button id="reset-savings" style="margin-top: 15px; background-color: #6c757d; font-size: 12px; padding: 8px;">Reset Savings</button>
+        </div>
+    </div>
+
+    <script src="trip.js"></script>
+</body>
+</html>
