@@ -11,6 +11,8 @@ let allTripsData = [];
 let editMode = false;
 let editId = null;
 
+const API_URL = 'https://travel-planner-api-ao35.onrender.com';
+
 startDateInput.addEventListener('change', () => {
     const selectedDate = startDateInput.value;
     endDateInput.min = selectedDate;
@@ -78,7 +80,7 @@ const startEdit = (trip) => {
 const deleteTrip = async (id) => {
     if (confirm("Are you sure you want to delete this trip?")) {
         try {
-            await fetch(`http://localhost:5000/trips/${id}`, { method: 'DELETE' });
+            await fetch(`${API_URL}/trips/${id}`, { method: 'DELETE' });
             getTrips();
         } catch (err) {
             alert("Failed to delete trip.");
@@ -120,7 +122,7 @@ const renderTrips = (trips) => {
 
 const getTrips = async () => {
     try {
-        const res = await fetch('http://localhost:5000/trips');
+        const res = await fetch(`${API_URL}/trips`);
         if (!res.ok) throw new Error("Failed to fetch trips");
         allTripsData = await res.json();
         filterAndSort();
@@ -139,7 +141,7 @@ tripForm.addEventListener('submit', async (e) => {
         budget: document.getElementById('budget').value
     };
 
-    const url = editMode ? `http://localhost:5000/trips/${editId}` : 'http://localhost:5000/trips';
+    const url = editMode ? `${API_URL}/trips/${editId}` : `${API_URL}/trips`;
     const method = editMode ? 'PUT' : 'POST';
 
     try {
