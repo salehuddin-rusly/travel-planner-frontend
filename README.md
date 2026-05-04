@@ -11,18 +11,31 @@ To fulfill the project requirements, please refer to the backend repository belo
 
 ---
 
-## 🚀 Deployment
+## 🚀 Live Links
 *   **Live Website:** https://travel-planner-frontend-2z3i.onrender.com
+*   **Backend API:** https://travel-planner-api-ao35.onrender.com
+
+## ☁️ Deployment Environment
+The entire application is hosted on **Render** using a distributed architecture to ensure stability and performance:
+
+| Service | Type | Runtime | Region |
+| :--- | :--- | :--- | :--- |
+| **Frontend** | Static Site | Static | Global (CDN) |
+| **Backend API** | Web Service | Node.js | Singapore (Asia-Southeast) |
+| **Database** | Managed DB | PostgreSQL 15 | Singapore (Asia-Southeast) |
+
+---
 
 ## ✨ Key Features
 *   **Full CRUD Management:** Add, edit, and delete trips with real-time updates.
 *   **Advanced Search & Sorting:** Search destinations and sort trips by date or budget (High-to-Low / Low-to-High).
-*   **Dynamic Status Badges:** Automatic categorization for Upcoming, Ongoing, and Completed trips.
-*   **Tabung (Savings Tracker):** Visual progress bar for individual trip savings goals using LocalStorage.
+*   **Dynamic Status Badges:** Automatic categorization for Upcoming, Ongoing, and Completed trips based on the current date.
+*   **Tabung (Savings Tracker):** Visual progress bar for individual trip savings goals utilizing LocalStorage for persistence.
 
 ## 🛠️ Tech Stack
 *   **Frontend:** HTML5, CSS3 (Custom Glassmorphism Design), Vanilla JavaScript (ES6+).
-*   **Backend Connection:** Fetch API to Node.js/Express.js backend.
+*   **Backend Connection:** Fetch API communicating with a Node.js/Express.js REST API.
+*   **Database:** Persistent storage using a managed PostgreSQL instance on Render.
 
 ## 💻 How to Run Locally
 1. Clone this repository.
