@@ -1,5 +1,8 @@
 const tripForm = document.getElementById('trip-form');
-const tripsContainer = document.getElementById('trips-container');
+const ongoingContainer = document.getElementById('ongoing-container');
+const upcomingContainer = document.getElementById('upcoming-container');
+const completedContainer = document.getElementById('completed-container');
+
 const startDateInput = document.getElementById('start_date');
 const endDateInput = document.getElementById('end_date');
 const totalBudgetDisplay = document.getElementById('total-budget');
@@ -22,7 +25,7 @@ startDateInput.addEventListener('input', () => {
 });
 
 const getStatusBadge = (startDate, endDate) => {
-    const today = new Date('2026-05-02'); 
+    const today = new Date();
     const start = new Date(startDate);
     const end = new Date(endDate);
 
@@ -91,7 +94,10 @@ const deleteTrip = async (id) => {
 };
 
 const renderTrips = (trips) => {
-    tripsContainer.innerHTML = '';
+    ongoingContainer.innerHTML = '';
+    upcomingContainer.innerHTML = '';
+    completedContainer.innerHTML = '';
+    
     let totalBudget = 0;
 
     trips.forEach(trip => {
@@ -117,8 +123,23 @@ const renderTrips = (trips) => {
                 </div>
             </div>
         `;
-        tripsContainer.appendChild(div);
+
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        const start = new Date(trip.start_date);
+        start.setHours(0,0,0,0);
+        const end = new Date(trip.end_date);
+        end.setHours(0,0,0,0);
+
+        if (today < start) {
+            upcomingContainer.appendChild(div);
+        } else if (today > end) {
+            completedContainer.appendChild(div);
+        } else {
+            ongoingContainer.appendChild(div);
+        }
     });
+    
     totalBudgetDisplay.innerText = `Total Budget: RM${totalBudget.toLocaleString()}`;
 };
 
