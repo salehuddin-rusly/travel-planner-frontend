@@ -150,7 +150,8 @@ const getTrips = async () => {
         allTripsData = await res.json();
         filterAndSort();
     } catch (err) {
-        alert("Could not load trips from server.");
+        console.error(err);
+        alert("The server is waking up (Render Free Tier). Please wait 30-60 seconds and refresh the page.");
     }
 };
 

@@ -24,6 +24,8 @@ The entire application is hosted on **Render** using a distributed architecture 
 | **Backend API** | Web Service | Node.js | Singapore (Asia-Southeast) |
 | **Database** | Managed DB | PostgreSQL 15 | Singapore (Asia-Southeast) |
 
+> ⚠️ **Note on Performance:** This project is hosted on Render's Free Tier. If the site has been inactive, the backend API may take **50-60 seconds** to "spin up" from a cold start. If you see a "waking up" alert, please wait a minute and refresh the page.
+
 ---
 
 ## ✨ Key Features
