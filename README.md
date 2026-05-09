@@ -4,16 +4,23 @@ This is the frontend application for the Travel Planner project, built as part o
 
 ---
 
+## 📺 Project Demonstration
+Click the link below to watch the full walkthrough of the application, features, and technical implementation:
+
+**[Watch the Presentation Video on YouTube](https://youtu.be/8FNqd_3UPyw)**
+
+---
+
 ## 🔗 Full-Stack Components
 To fulfill the project requirements, please refer to the backend repository below for the API code and database schema:
-*   **Backend Repository:** https://github.com/salehuddin-rusly/travel-planner-backend
-*   **Backend API (Live):** https://travel-planner-api-ao35.onrender.com
+* **Backend Repository:** https://github.com/salehuddin-rusly/travel-planner-backend
+* **Backend API (Live):** https://travel-planner-api-ao35.onrender.com
 
 ---
 
 ## 🚀 Live Links
-*   **Live Website:** https://travel-planner-frontend-2z3i.onrender.com
-*   **Backend API:** https://travel-planner-api-ao35.onrender.com
+* **Live Website:** https://travel-planner-frontend-2z3i.onrender.com
+* **Backend API:** https://travel-planner-api-ao35.onrender.com
 
 ## ☁️ Deployment Environment
 The entire application is hosted on **Render** using a distributed architecture to ensure stability and performance:
@@ -29,15 +36,15 @@ The entire application is hosted on **Render** using a distributed architecture 
 ---
 
 ## ✨ Key Features
-*   **Full CRUD Management:** Add, edit, and delete trips with real-time updates.
-*   **Advanced Search & Sorting:** Search destinations and sort trips by date or budget (High-to-Low / Low-to-High).
-*   **Dynamic Status Badges:** Automatic categorization for Upcoming, Ongoing, and Completed trips based on the current date.
-*   **Tabung (Savings Tracker):** Visual progress bar for individual trip savings goals utilizing LocalStorage for persistence.
+* **Full CRUD Management:** Add, edit, and delete trips with real-time updates.
+* **Advanced Search & Sorting:** Search destinations and sort trips by date or budget (High-to-Low / Low-to-High).
+* **Dynamic Status Badges:** Automatic categorization for Upcoming, Ongoing, and Completed trips based on the current date.
+* **Tabung (Savings Tracker):** Visual progress bar for individual trip savings goals utilizing LocalStorage for persistence.
 
 ## 🛠️ Tech Stack
-*   **Frontend:** HTML5, CSS3 (Custom Glassmorphism Design), Vanilla JavaScript (ES6+).
-*   **Backend Connection:** Fetch API communicating with a Node.js/Express.js REST API.
-*   **Database:** Persistent storage using a managed PostgreSQL instance on Render.
+* **Frontend:** HTML5, CSS3 (Custom Glassmorphism Design), Vanilla JavaScript (ES6+).
+* **Backend Connection:** Fetch API communicating with a Node.js/Express.js REST API.
+* **Database:** Persistent storage using a managed PostgreSQL instance on Render.
 
 ## 💻 How to Run Locally
 1. Clone this repository.
@@ -45,6 +52,6 @@ The entire application is hosted on **Render** using a distributed architecture 
 3. Ensure the backend API is reachable at the configured `API_URL`.
 
 ## 👤 Developer Information
-*   **Name:** Salehuddin Al-Ayyubi (Hud)
-*   **Program:** Adnexio Software Engineering Conversion Bootcamp
-*   **Submission Deadline:** May 9, 2026
+* **Name:** Salehuddin Al-Ayyubi (Hud)
+* **Program:** Adnexio Software Engineering Conversion Bootcamp
+* **Submission Deadline:** May 9, 2026
